@@ -1,6 +1,6 @@
 # 又又一个遍黑体 Magisk 模块
 
-参见 [https://github.com/lakejason0/AAnother-Plangothic-magisk-module 又又一个遍黑体 Magisk 模块]。
+参见 [又又一个遍黑体 Magisk 模块](https://github.com/lakejason0/AAnother-Plangothic-magisk-module)。
 
 ## 模块下载
 
