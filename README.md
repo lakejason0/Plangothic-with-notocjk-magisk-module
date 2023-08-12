@@ -1,4 +1,4 @@
-# 又又一个遍黑体 Magisk 模块
+# 遍黑体+思源字重补全 Magisk 模块
 
 参见 [又又一个遍黑体 Magisk 模块](https://github.com/lakejason0/AAnother-Plangothic-magisk-module)。
 
