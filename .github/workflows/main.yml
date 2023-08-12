@@ -21,7 +21,7 @@ jobs:
 
 
         TARGET_COMMAND="sed -i 's/<\\\\/familyset>/<family>\\\\n<font weight=\"400\" style=\"normal\">DroidSansFallbackFull.ttf<\\\\/font>\\\\n<\\\\/family>\\\\n<\\\\/familyset>/g' \$MODPATH\$SYSTEMFILEPATH\$FILE"
-        NEW_COMMAND="sed -i 's/<\\\\/familyset>/<family>\\\\n<font weight=\"400\" style=\"normal\">PlangothicP1-Regular.allideo.ttf<\/font>\\\\n<\\\\/family>\\\\n<family>\\\\n<font weight=\"400\" style=\"normal\">PlangothicP2-Regular.ttf<\/font>\\\\n<\\\\/family>\\\\n<\\\\/familyset>/g' \$MODPATH\$SYSTEMFILEPATH\$FILE"
+        NEW_COMMAND="sed -i 's/<\\\\/familyset>/<family>\\\\n<font weight=\"400\" style=\"normal\">PlangothicP1-Regular.allideo.ttf<\\\\/font>\\\\n<\\\\/family>\\\\n<family>\\\\n<font weight=\"400\" style=\"normal\">PlangothicP2-Regular.ttf<\\\\/font>\\\\n<\\\\/family>\\\\n<\\\\/familyset>/g' \$MODPATH\$SYSTEMFILEPATH\$FILE"
         LINE_NUMBER=$(grep -n "$TARGET_COMMAND" customize.sh | cut -d ":" -f 1)
 
         if [ -n "$LINE_NUMBER" ]; then
