@@ -4,7 +4,7 @@
 
 ## 模块下载
 
-[请进入 Releases 页面下载](https://github.com/lakejason0/AAnother-Plangothic-magisk-module/releases)
+[请进入 Releases 页面下载](https://github.com/lakejason0/Plangothic-with-notocjk-magisk-module/releases)
 
 ## 注意事项
 
