@@ -32,8 +32,8 @@ jobs:
             
             # Update version.json with the latest version and increment versionCode
             NEW_VERSION_CODE=$(( $(cat version.json | jq -r '.versionCode') + 1 ))
-            ZIP_URL="https://github.com/lakejason0/AAnother-Plangothic-magisk-module/releases/download/$LATEST_RELEASE/Plangothic-magisk-module.zip"
-            NEW_CONTENT="{\"version\": \"$LATEST_RELEASE\", \"versionCode\": $NEW_VERSION_CODE, \"zipUrl\": \"$ZIP_URL\", \"changelog\": \"https://raw.githubusercontent.com/lakejason0/AAnother-Plangothic-magisk-module/main/extra/changelog.md\"}"
+            ZIP_URL="https://github.com/lakejason0/Plangothic-with-notocjk-magisk-module/releases/download/$LATEST_RELEASE/Plangothic-magisk-module.zip"
+            NEW_CONTENT="{\"version\": \"$LATEST_RELEASE\", \"versionCode\": $NEW_VERSION_CODE, \"zipUrl\": \"$ZIP_URL\", \"changelog\": \"https://raw.githubusercontent.com/lakejason0/Plangothic-with-notocjk-magisk-module/main/extra/changelog.md\"}"
             echo "$NEW_CONTENT" > version.json
             sed -i "s/version=.*/version=$LATEST_RELEASE/" module.prop
             sed -i "s/versionCode=.*/versionCode=$NEW_VERSION_CODE/" module.prop
