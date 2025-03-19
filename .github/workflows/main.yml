@@ -22,13 +22,12 @@ jobs:
         cp -rf ../notocjk/system .
         cp ../notocjk/customize.sh .
 
-
-        TARGET_COMMAND="sed -i 's/<\\\\/familyset>/<family>\\\\n<font weight=\"400\" style=\"normal\">DroidSansFallbackFull.ttf<\\\\/font>\\\\n<\\\\/family>\\\\n<\\\\/familyset>/g' \$MODPATH\$SYSTEMFILEPATH\$FILE"
+        # very OBSCURE; shouldn't rely on it but here it is...
         NEW_COMMAND="sed -i 's/<\\\\/familyset>/<family>\\\\n<font weight=\"400\" style=\"normal\">PlangothicP1-Regular.ttf<\\\\/font>\\\\n<\\\\/family>\\\\n<family>\\\\n<font weight=\"400\" style=\"normal\">PlangothicP2-Regular.ttf<\\\\/font>\\\\n<\\\\/family>\\\\n<\\\\/familyset>/g' \$MODPATH\$SYSTEMFILEPATH\$FILE"
-        LINE_NUMBER=$(grep -n "$TARGET_COMMAND" customize.sh | cut -d ":" -f 1)
+        LINE_NUMBER=$(grep -n -B2 "^done$" customize.sh | grep "fi$" | tail -1 | cut -d"-" -f1)
 
         if [ -n "$LINE_NUMBER" ]; then
-            sed -i "$LINE_NUMBER a $NEW_COMMAND" customize.sh
+            sed -i "$LINE_NUMBER i $NEW_COMMAND" customize.sh
         else
             echo "Target command not found in the file. Contact repo owner to update their code."
         fi
